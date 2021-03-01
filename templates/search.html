@@ -21,11 +21,12 @@
             <span style="font-size:20px;">Seller Email : {{product.seller_email}}</span><br/>
         </div>
         <div class="col-md-1"></div>
+    </div>
+    <br/><br/>
     {% endfor %}
     {% else %}
         <h2>No Products Available</h2>
         <h2>Go to <a href="/home" class="btn btn-primary">Home</a></h2>
     {% endif %}
-    </div>
 </div>
 {% endblock %}
