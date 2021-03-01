@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row" style="box-shadow:0px 0px 2px red;">
+        <div class="col" style="text-align:center;padding:30px;">
+            <h2>Search for products</h2><br/>
+            <form method="GET" action="/search">
+                <input type="text" class="form-control" name="search" placeholder="Enter product here..........." id="search" style="border:2px dashed red;"/><br/>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Buy and Sell</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="padding:30px;">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="box-shadow: 0px 0px 5px red;padding:20px;">
+            {% if message %}
+            <div class="alert alert-primary" role="alert">
+                {{message}}
+            </div>
+            {% endif %}
+            <h1 style="border-bottom:2px solid black;padding:10px;">Login Here</h1>
+            <form method="POST" action="/login">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a class="btn btn-success" href='/register'>Register</a>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+{% endblock %}
